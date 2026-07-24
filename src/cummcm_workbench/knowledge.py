@@ -1,11 +1,15 @@
 from __future__ import annotations
+
+import re
 from pathlib import Path
-import re, json, yaml, numpy as np
+
+import joblib
+import numpy as np
+import yaml
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.preprocessing import normalize
-import joblib
 
-FRONT = re.compile(r'^---\s*\n(.*?)\n---\s*\n', re.S)
+FRONT = re.compile(r'^---\s*\n(.*?)\n---\s*\n', re.DOTALL)
 
 def parse_note(path: Path) -> dict:
     text=path.read_text(encoding='utf-8')

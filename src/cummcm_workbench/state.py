@@ -1,7 +1,8 @@
 from __future__ import annotations
-from pathlib import Path
-from datetime import datetime, timezone
+
 import json
+from datetime import UTC, datetime
+from pathlib import Path
 
 DEFAULT_GATES = {
     'topic_selected': 'PENDING',
@@ -15,7 +16,7 @@ DEFAULT_GATES = {
 }
 
 def utc_now() -> str:
-    return datetime.now(timezone.utc).isoformat()
+    return datetime.now(UTC).isoformat()
 
 def new_state(year: int, problem: str) -> dict:
     pid = f'{year}-{problem.upper()}'

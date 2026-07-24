@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from collections import defaultdict, deque
+
 
 def affected_nodes(graph: dict[str,list[str]], changed: list[str]) -> list[str]:
     reverse=defaultdict(list)

@@ -1,6 +1,9 @@
 from __future__ import annotations
+
+import hashlib
+import json
 from pathlib import Path
-import hashlib, json
+
 
 def sha256_file(path: str | Path, chunk_size: int = 1024 * 1024) -> str:
     h = hashlib.sha256()

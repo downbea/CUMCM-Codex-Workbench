@@ -1,8 +1,12 @@
 from __future__ import annotations
+
+import json
+import mimetypes
+from datetime import UTC, datetime
 from pathlib import Path
-from datetime import datetime, timezone
-import json, mimetypes
+
 from .hashing import sha256_file
+
 
 def build_manifest(root: str | Path) -> dict:
     root = Path(root).resolve(); items=[]
@@ -11,10 +15,10 @@ def build_manifest(root: str | Path) -> dict:
         stat=p.stat(); mime,_=mimetypes.guess_type(p.name)
         items.append({
             'path': p.relative_to(root).as_posix(), 'suffix': p.suffix.lower(),
-            'size_bytes': stat.st_size, 'modified_utc': datetime.fromtimestamp(stat.st_mtime, timezone.utc).isoformat(),
+            'size_bytes': stat.st_size, 'modified_utc': datetime.fromtimestamp(stat.st_mtime, UTC).isoformat(),
             'sha256': sha256_file(p), 'mime': mime or 'application/octet-stream'
         })
-    return {'root': str(root), 'generated_at': datetime.now(timezone.utc).isoformat(), 'files': items}
+    return {'root': str(root), 'generated_at': datetime.now(UTC).isoformat(), 'files': items}
 
 def write_manifest(root: str | Path, json_path: str | Path, md_path: str | Path) -> None:
     data=build_manifest(root)

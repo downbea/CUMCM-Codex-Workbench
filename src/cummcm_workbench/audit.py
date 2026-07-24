@@ -1,6 +1,7 @@
 from __future__ import annotations
+
+import re
 from pathlib import Path
-import json, re
 
 SEVERITY_ORDER={'PASS':0,'MINOR':1,'MAJOR':2,'BLOCKER':3}
 

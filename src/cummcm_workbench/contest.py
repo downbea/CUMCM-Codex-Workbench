@@ -1,7 +1,10 @@
 from __future__ import annotations
-from pathlib import Path
+
 import shutil
+from pathlib import Path
+
 from .state import new_state, save_state
+
 
 def create_contest(root: Path, template: Path, year: int, problem: str, force: bool = False) -> Path:
     problem = problem.upper()

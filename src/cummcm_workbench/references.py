@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+
 def format_gbt7714(item: dict, index: int) -> str:
     authors=item.get('authors') or item.get('author') or '作者待核验'
     if isinstance(authors,list): authors=', '.join(authors)

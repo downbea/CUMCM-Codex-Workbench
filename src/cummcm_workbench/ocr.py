@@ -1,10 +1,14 @@
 from __future__ import annotations
-from pathlib import Path
+
 import json
+from pathlib import Path
+
 
 def extract_pdf_text(pdf: str | Path, output_dir: str | Path) -> dict:
-    try: import fitz
-    except ImportError as e: raise RuntimeError('Install OCR extras: pip install .[ocr]') from e
+    try:
+        import fitz
+    except ImportError as e:
+        raise RuntimeError('Install OCR extras: pip install .[ocr]') from e
     pdf=Path(pdf); out=Path(output_dir); out.mkdir(parents=True,exist_ok=True)
     doc=fitz.open(pdf); pages=[]
     for i,page in enumerate(doc):

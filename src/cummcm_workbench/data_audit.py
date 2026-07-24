@@ -1,6 +1,11 @@
 from __future__ import annotations
+
+import json
 from pathlib import Path
-import json, pandas as pd, numpy as np
+
+import numpy as np
+import pandas as pd
+
 
 def read_table(path: Path) -> dict[str, pd.DataFrame]:
     s=path.suffix.lower()

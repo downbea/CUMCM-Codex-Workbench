@@ -1,6 +1,9 @@
 from __future__ import annotations
+
+import re
+import shutil
+import subprocess
 from pathlib import Path
-import re, subprocess, shutil
 
 INCLUDE_RE=re.compile(r'\{\{INCLUDE:([^}]+)\}\}')
 

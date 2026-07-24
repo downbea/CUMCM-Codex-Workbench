@@ -1,16 +1,20 @@
 from __future__ import annotations
-import argparse, json
+
+import argparse
+import json
 from pathlib import Path
+
+from .audit import audit_markdown
 from .config import load_config, resolve_paths
 from .contest import create_contest
-from .manifest import write_manifest
 from .data_audit import audit_file
-from .knowledge import build_index, search
-from .state import load_state, save_state, set_gate
-from .audit import audit_markdown
 from .freeze import freeze_artifacts
+from .knowledge import build_index, search
+from .manifest import write_manifest
 from .ocr import extract_pdf_text
 from .paper import assemble_markdown
+from .state import load_state, save_state, set_gate
+
 
 def main() -> None:
     parser=argparse.ArgumentParser(prog='cummcm')
