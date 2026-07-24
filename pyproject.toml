@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cummcm-codex-workbench"
+version = "0.1.0"
+description = "CUMCM local Codex workflow, knowledge, audit and document tooling"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=2.0",
+  "pandas>=2.1",
+  "scipy>=1.13",
+  "scikit-learn>=1.4",
+  "statsmodels>=0.14",
+  "matplotlib>=3.8",
+  "networkx>=3.2",
+  "openpyxl>=3.1",
+  "python-docx>=1.1",
+  "PyYAML>=6.0",
+  "Jinja2>=3.1",
+]
+
+[project.optional-dependencies]
+optimization = ["pulp>=2.8", "ortools>=9.10", "cvxpy>=1.5", "pyomo>=6.8", "highspy>=1.7"]
+knowledge = ["sentence-transformers>=3.0", "rank-bm25>=0.2.2"]
+ocr = ["pymupdf>=1.24", "pillow>=10", "pytesseract>=0.3.13"]
+ml = ["xgboost>=2.1", "lightgbm>=4.4", "catboost>=1.2", "torch>=2.3"]
+dev = ["pytest>=8", "ruff>=0.6", "mypy>=1.11"]
+
+[project.scripts]
+cummcm = "cummcm_workbench.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

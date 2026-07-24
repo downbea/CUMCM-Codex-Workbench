@@ -1,0 +1,7 @@
+contest:
+  start: null
+  deadline: null
+  final_buffer_minutes: 120
+plan:
+  dynamic: true
+  critical_path_refresh: true

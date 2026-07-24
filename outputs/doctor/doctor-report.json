@@ -1,0 +1,63 @@
+﻿{
+    "timestamp":  "2026-07-24T22:17:41.5309974+08:00",
+    "root":  "D:\\obsidian笔记",
+    "commands":  {
+                     "python":  {
+                                    "ok":  true,
+                                    "path":  "D:\\anaconda\\python.exe"
+                                },
+                     "git":  {
+                                 "ok":  true,
+                                 "path":  "D:\\Program Files\\Git\\cmd\\git.exe"
+                             },
+                     "gh":  {
+                                "ok":  true,
+                                "path":  "C:\\Users\\许俊杰\\AppData\\Local\\Programs\\GitHub CLI\\gh.exe"
+                            },
+                     "pandoc":  {
+                                    "ok":  true,
+                                    "path":  "D:\\anaconda\\Scripts\\pandoc.exe"
+                                },
+                     "obsidian":  {
+                                      "ok":  false,
+                                      "path":  null
+                                  }
+                 },
+    "paths":  {
+                  "CUMCM-Codex-Workbench":  {
+                                                "exists":  true,
+                                                "writable":  true
+                                            },
+                  "CUMCM-Knowledge-Vault":  {
+                                                "exists":  true,
+                                                "writable":  true
+                                            },
+                  "CUMCM-Contests":  {
+                                         "exists":  true,
+                                         "writable":  true
+                                     }
+              },
+    "word":  {
+                 "ok":  true,
+                 "version":  "16.0"
+             },
+    "gpu":  [
+                {
+                    "Name":  "Todesk Virtual Display Adapter",
+                    "AdapterRAM":  null,
+                    "DriverVersion":  "16.44.2.509"
+                },
+                {
+                    "Name":  "Intel(R) UHD Graphics",
+                    "AdapterRAM":  2147479552,
+                    "DriverVersion":  "32.0.101.6790"
+                },
+                {
+                    "Name":  "NVIDIA GeForce RTX 4060 Laptop GPU",
+                    "AdapterRAM":  4293918720,
+                    "DriverVersion":  "32.0.15.6624"
+                }
+            ],
+    "memory_gb":  15.7,
+    "github_auth":  "gh.exe : You are not logged into any GitHub hosts. To log in, run: gh auth login\r\nAt D:\\obsidian笔记\\CUMCM-Codex-Workbench\\doctor.ps1:49 char:76\r\n+ ... nd gh -ErrorAction SilentlyContinue) { (\u0026 gh auth status 2\u003e\u00261 | Out-S ...\r\n+                                             ~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : NotSpecified: (You are not log...: gh auth login:String) [], RemoteException\r\n    + FullyQualifiedErrorId : NativeCommandError\r\n \r\n"
+}

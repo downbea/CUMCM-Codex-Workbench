@@ -1,0 +1,17 @@
+name: cummcm-figure
+version: 0.1.0
+backend: python
+always_load:
+  - static/core/contract.md
+  - static/core/stance.md
+references:
+  on_demand:
+    - condition: choose a chart type or multi-panel layout
+      path: references/chart-types.md
+    - condition: final delivery or manuscript insertion
+      path: references/qa-contract.md
+    - condition: export dimensions and formats
+      path: references/export-spec.md
+scripts:
+  validator: scripts/validate_figure.py
+  style: scripts/figure_style.py

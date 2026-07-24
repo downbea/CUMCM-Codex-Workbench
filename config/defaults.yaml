@@ -1,0 +1,39 @@
+paths:
+  root: "D:/obsidian笔记"
+  workbench: "D:/obsidian笔记/CUMCM-Codex-Workbench"
+  vault: "D:/obsidian笔记/CUMCM-Knowledge-Vault"
+  contests: "D:/obsidian笔记/CUMCM-Contests"
+
+runtime:
+  max_parallel_light_tasks: 2
+  max_parallel_heavy_tasks: 1
+  long_job_approval_minutes: 20
+  final_submission_buffer_minutes: 120
+  random_seed: 2026
+
+knowledge:
+  formal_statuses: [approved]
+  seeded_statuses: [seeded]
+  retrieval:
+    word_tfidf_weight: 0.55
+    char_tfidf_weight: 0.35
+    metadata_weight: 0.10
+    top_k: 12
+
+figures:
+  backend: python
+  formats: [svg, pdf, png]
+  png_dpi: 300
+  background: white
+  chinese_font_candidates: [Microsoft YaHei, SimHei, Noto Sans CJK SC]
+
+paper:
+  source_of_truth: markdown
+  reference_docx: "templates/word/CUMCM_reference_template.docx"
+  bibliography_style: "GB/T 7714 numeric"
+  require_native_word_equations: true
+
+backup:
+  provider: github
+  periodic_check_minutes_during_active_contest: 30
+  git_lfs: true

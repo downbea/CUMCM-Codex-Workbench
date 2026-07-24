@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CUMCM project state",
+  "type": "object",
+  "required": [
+    "project_id",
+    "year",
+    "problem",
+    "stage",
+    "tasks",
+    "gates",
+    "artifacts"
+  ],
+  "properties": {
+    "project_id": {
+      "type": "string"
+    },
+    "year": {
+      "type": "integer"
+    },
+    "problem": {
+      "type": "string"
+    },
+    "stage": {
+      "type": "string"
+    },
+    "updated_at": {
+      "type": "string"
+    },
+    "tasks": {
+      "type": "object"
+    },
+    "gates": {
+      "type": "object"
+    },
+    "artifacts": {
+      "type": "object"
+    }
+  }
+}

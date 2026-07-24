@@ -1,0 +1,4 @@
+questions:
+  Q1: {depends_on: []}
+  Q2: {depends_on: [Q1]}
+  Q3: {depends_on: [Q1, Q2]}
