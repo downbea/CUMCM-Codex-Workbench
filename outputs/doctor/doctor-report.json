@@ -1,5 +1,5 @@
 ﻿{
-    "timestamp":  "2026-07-24T22:33:40.7084886+08:00",
+    "timestamp":  "2026-07-24T23:10:29.1670193+08:00",
     "root":  "D:\\obsidian笔记",
     "commands":  {
                      "python":  {
@@ -59,5 +59,5 @@
                 }
             ],
     "memory_gb":  15.7,
-    "github_auth":  "gh.exe : You are not logged into any GitHub hosts. To log in, run: gh auth login\r\nAt D:\\obsidian笔记\\CUMCM-Codex-Workbench\\doctor.ps1:49 char:76\r\n+ ... nd gh -ErrorAction SilentlyContinue) { (\u0026 gh auth status 2\u003e\u00261 | Out-S ...\r\n+                                             ~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : NotSpecified: (You are not log...: gh auth login:String) [], RemoteException\r\n    + FullyQualifiedErrorId : NativeCommandError\r\n \r\n"
+    "github_auth":  "github.com\r\n  ✓ Logged in to github.com account downbea (keyring)\r\n  - Active account: true\r\n  - Git operations protocol: https\r\n  - Token: gho_************************************\r\n  - Token scopes: \u0027gist\u0027, \u0027read:org\u0027, \u0027repo\u0027\r\n"
 }
