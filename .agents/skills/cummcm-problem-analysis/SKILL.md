@@ -17,4 +17,13 @@ Respect human gates, source traceability, relative-path configuration, Git workt
 
 Restate the problem without copying it. Separate shared definitions from subquestion-specific goals. Create a dependency DAG, shared data contract, symbol table, assumptions with justification and risk, and explicit inputs/outputs for Q1, Q2, Q3, etc.
 
+Create a task-requirement matrix before generating model candidates. For every subquestion, record:
+
+- mandatory action verbs such as analyze, predict, optimize, evaluate and recommend;
+- explicitly required factors, objectives, constraints, horizons, scenarios and output forms;
+- upstream inputs and downstream consumers;
+- the evidence needed to declare each requirement answered.
+
+Classify these as task-coverage requirements, not optional model features. If data cannot support one literally, define the closest defensible interpretation and flag the residual gap for human approval; do not silently drop it.
+
 Use `shared/` for common definitions and per-question directories for question-specific work. Parallelize only tasks whose dependencies are frozen or independent.
